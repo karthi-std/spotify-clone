@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  spotify Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icons"  href="assets/images/spotify icon.png">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="assets/images/spotify logo.png" alt="Spotify">
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li class="active"><i class="fas fa-home"></i> <span>Home</span></li>
+                    <li><i class="fas fa-search"></i> <span>Search</span></li>
+                    <li><i class="fas fa-book"></i> <span>Your Library</span></li>
+                </ul>
+            </nav>
+            
+            <div class="playlists">
+                <ul>
+                    <li><i class="fas fa-plus-square"></i> <span>Create Playlist</span></li>
+                    <li><i class="fas fa-heart"></i> <span>Liked Songs</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="nav-controls">
+                    <button class="nav-btn" id="back-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="nav-btn" id="forward-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="user-menu">
+                    <button class="user-btn" id="user-btn">
+                        <img src="assets/images/my profile image.png" alt="User">
+                        <span>Profile</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </header>
+
+            <section class="content">
+                <div class="greeting">
+                    <h1>Good vibes!</h1>
+                </div>
+                
+                <div class="playlist-grid" id="playlist-grid"></div>
+                
+                <h2 class="section-title">Recently played</h2>
+                
+                <div class="tracks-container">
+                    <div class="track-list" id="track-list"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Now Playing Bar -->
+        <footer class="now-playing">
+            <div class="track-info">
+                <div class="track-image">
+                    <img src="assets/images/coolie.jpg" alt="Album Cover" id="now-playing-cover">
+                </div>
+                <div class="track-details">
+                    <h4 id="now-playing-title">Song Title</h4>
+                    <p id="now-playing-artist">Artist Name</p>
+                </div>
+                <button class="like-btn" id="like-btn"><i class="far fa-heart"></i></button>
+            </div>
+            
+            <div class="player-controls">
+                <div class="controls">
+                    <button class="control-btn" id="shuffle-btn"><i class="fas fa-random"></i></button>
+                    <button class="control-btn" id="prev-btn"><i class="fas fa-step-backward"></i></button>
+                    <button class="play-btn" id="play-btn"><i class="fas fa-play"></i></button>
+                    <button class="control-btn" id="next-btn"><i class="fas fa-step-forward"></i></button>
+                    <button class="control-btn" id="repeat-btn"><i class="fas fa-redo"></i></button>
+                </div>
+                <div class="progress-container">
+                    <span id="current-time">0:00</span>
+                    <div class="progress-bar" id="progress-bar">
+                        <div class="progress" id="progress"></div>
+                    </div>
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+            
+            <div class="volume-controls">
+                <i class="fas fa-volume-up"></i>
+                <div class="volume-bar" id="volume-bar">
+                    <div class="volume-level" id="volume-level"></div>
+                </div>
+            </div>
+            
+            <audio id="audio-player"></audio>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
